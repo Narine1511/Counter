@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    @IBOutlet weak var text: UILabel!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        text.text = "\(number)"
+        text.textAlignment = .center
     }
 
 
-}
+    @IBAction func title(_ sender: Any) {
+            number += 1
+        text.text = "Значение счётчика: \(number)"
+    }
+    var number: Int = 0
+    }
+
 
